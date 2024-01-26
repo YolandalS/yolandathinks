@@ -1,98 +1,92 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>你的个人网站</title>
+    <!-- 在这里添加你的样式表链接、其他 meta 标签等 -->
+    <style>
+        /* 在这里添加你的自定义样式 */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        #container {
+            display: flex;
+        }
+
+        #navigation {
+            width: 20%;
+            background-color: #333;
+            color: white;
+            padding: 20px;
+        }
+
+        #banner {
+            width: 50%;
+            padding: 20px;
+            background-color: #4285f4;
+            color: white;
+        }
+
+        #articles {
+            width: 30%;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .article-card {
+            width: 48%;
+            margin-bottom: 20px;
+            background-color: white;
+            padding: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
 <body>
-
-
-<div style="width: 100%; height: 100%; position: relative; background: #535759">
-    <div style="left: 33px; top: 38px; position: absolute; color: white; font-size: 24px; font-family: Inter; font-weight: 500; word-wrap: break-word">balabala</div>
-    <div style="left: 33px; top: 69px; position: absolute; color: white; font-size: 12px; font-family: Inter; font-weight: 400; word-wrap: break-word">balabala2</div>
-    <div style="left: 34px; top: 103px; position: absolute; justify-content: flex-end; align-items: center; display: inline-flex">
-        <img style="width: 360px; height: 151px" src="https://via.placeholder.com/360x151" />
-    </div>
-</div>
-
-
-
-    <div style="width: 100%; height: 100%; position: relative; background: white">
-    <div style="width: 310px; height: 1024px; left: 0px; top: 0px; position: absolute; background: rgba(0, 0, 0, 0.06)"></div>
-    <div style="left: 342px; top: 80px; position: absolute; color: black; font-size: 64px; font-family: Inter; font-weight: 700; word-wrap: break-word">Yolanda<br/>Thinks</div>
-    <div style="height: 324px; left: 342px; top: 283px; position: absolute; background: rgba(0, 0, 0, 0.02); flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 16px; display: inline-flex">
-        <div style="color: black; font-size: 32px; font-family: Alibaba PuHuiTi; font-weight: 700; word-wrap: break-word">title 标题</div>
-        <div style="align-self: stretch; color: black; font-size: 28px; font-family: Alibaba PuHuiTi; font-weight: 400; word-wrap: break-word">一百字的内容摘要，一百字的内容摘要一百字的内容摘要一百字的内容摘要一百字的内容摘要</div>
-        <div style="align-self: stretch; justify-content: flex-start; align-items: flex-start; gap: 16px; display: inline-flex">
-            <div style="width: 70px; color: rgba(0, 0, 0, 0.70); font-size: 20px; font-family: Alibaba PuHuiTi; font-weight: 400; word-wrap: break-word">#话题 1</div>
-            <div style="width: 70px; color: rgba(0, 0, 0, 0.70); font-size: 20px; font-family: Alibaba PuHuiTi; font-weight: 400; word-wrap: break-word">#话题 2</div>
-            <div style="width: 70px; color: rgba(0, 0, 0, 0.70); font-size: 20px; font-family: Alibaba PuHuiTi; font-weight: 400; word-wrap: break-word">#话题 3</div>
-            <div style="width: 70px; color: rgba(0, 0, 0, 0.70); font-size: 20px; font-family: Alibaba PuHuiTi; font-weight: 400; word-wrap: break-word">#话题 4</div>
-            <div style="width: 70px; color: rgba(0, 0, 0, 0.70); font-size: 20px; font-family: Alibaba PuHuiTi; font-weight: 400; word-wrap: break-word">#话题 5</div>
+    <div id="container">
+        <!-- 导航栏 -->
+        <div id="navigation">
+            <!-- 在这里添加导航链接等 -->
+            <h2>导航栏</h2>
+            <ul>
+                <li><a href="#">首页</a></li>
+                <li><a href="#">文章1</a></li>
+                <li><a href="#">文章2</a></li>
+                <!-- 添加更多导航链接 -->
+            </ul>
         </div>
-        <div style="width: 382px; height: 16px; position: relative"></div>
-        <div style="width: 382px; height: 16px; position: relative"></div>
-        <div style="width: 132px; color: rgba(0, 0, 0, 0.70); font-size: 20px; font-family: Alibaba PuHuiTi; font-weight: 400; word-wrap: break-word">2024/01/23</div>
-    </div>
-    <div style="height: 324px; left: 342px; top: 699px; position: absolute; background: rgba(0, 0, 0, 0.02); flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 16px; display: inline-flex">
-        <div style="color: black; font-size: 32px; font-family: Alibaba PuHuiTi; font-weight: 700; word-wrap: break-word">title 标题</div>
-        <div style="align-self: stretch; color: black; font-size: 28px; font-family: Alibaba PuHuiTi; font-weight: 400; word-wrap: break-word">一百字的内容摘要，一百字的内容摘要一百字的内容摘要一百字的内容摘要一百字的内容摘要</div>
-        <div style="align-self: stretch; justify-content: flex-start; align-items: flex-start; gap: 16px; display: inline-flex">
-            <div style="width: 70px; color: rgba(0, 0, 0, 0.70); font-size: 20px; font-family: Alibaba PuHuiTi; font-weight: 400; word-wrap: break-word">#话题 1</div>
-            <div style="width: 70px; color: rgba(0, 0, 0, 0.70); font-size: 20px; font-family: Alibaba PuHuiTi; font-weight: 400; word-wrap: break-word">#话题 2</div>
-            <div style="width: 70px; color: rgba(0, 0, 0, 0.70); font-size: 20px; font-family: Alibaba PuHuiTi; font-weight: 400; word-wrap: break-word">#话题 3</div>
-            <div style="width: 70px; color: rgba(0, 0, 0, 0.70); font-size: 20px; font-family: Alibaba PuHuiTi; font-weight: 400; word-wrap: break-word">#话题 4</div>
-            <div style="width: 70px; color: rgba(0, 0, 0, 0.70); font-size: 20px; font-family: Alibaba PuHuiTi; font-weight: 400; word-wrap: break-word">#话题 5</div>
+
+        <!-- 标题banner区域 -->
+        <div id="banner">
+            <h1>你的个人网站</h1>
+            <!-- 可以在这里添加其他 banner 区域的内容 -->
         </div>
-        <div style="width: 382px; height: 16px; position: relative"></div>
-        <div style="width: 382px; height: 16px; position: relative"></div>
-        <div style="width: 132px; color: rgba(0, 0, 0, 0.70); font-size: 20px; font-family: Alibaba PuHuiTi; font-weight: 400; word-wrap: break-word">2024/01/23</div>
-    </div>
-    <div style="height: 324px; left: 867px; top: 283px; position: absolute; background: rgba(0, 0, 0, 0.02); flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 16px; display: inline-flex">
-        <div style="color: black; font-size: 32px; font-family: Alibaba PuHuiTi; font-weight: 700; word-wrap: break-word">title 标题</div>
-        <div style="align-self: stretch; color: black; font-size: 28px; font-family: Alibaba PuHuiTi; font-weight: 400; word-wrap: break-word">一百字的内容摘要，一百字的内容摘要一百字的内容摘要一百字的内容摘要一百字的内容摘要</div>
-        <div style="align-self: stretch; justify-content: flex-start; align-items: flex-start; gap: 16px; display: inline-flex">
-            <div style="width: 70px; color: rgba(0, 0, 0, 0.70); font-size: 20px; font-family: Alibaba PuHuiTi; font-weight: 400; word-wrap: break-word">#话题 1</div>
-            <div style="width: 70px; color: rgba(0, 0, 0, 0.70); font-size: 20px; font-family: Alibaba PuHuiTi; font-weight: 400; word-wrap: break-word">#话题 2</div>
-            <div style="width: 70px; color: rgba(0, 0, 0, 0.70); font-size: 20px; font-family: Alibaba PuHuiTi; font-weight: 400; word-wrap: break-word">#话题 3</div>
-            <div style="width: 70px; color: rgba(0, 0, 0, 0.70); font-size: 20px; font-family: Alibaba PuHuiTi; font-weight: 400; word-wrap: break-word">#话题 4</div>
-            <div style="width: 70px; color: rgba(0, 0, 0, 0.70); font-size: 20px; font-family: Alibaba PuHuiTi; font-weight: 400; word-wrap: break-word">#话题 5</div>
+
+        <!-- 文章入口卡片 -->
+        <div id="articles">
+            <!-- 文章1 -->
+            <div class="article-card">
+                <h3>文章标题1</h3>
+                <p>文章摘要或简介</p>
+                <a href="#">阅读更多</a>
+            </div>
+
+            <!-- 文章2 -->
+            <div class="article-card">
+                <h3>文章标题2</h3>
+                <p>文章摘要或简介</p>
+                <a href="#">阅读更多</a>
+            </div>
+
+            <!-- 添加更多文章卡片 -->
         </div>
-        <div style="width: 382px; height: 16px; position: relative"></div>
-        <div style="width: 382px; height: 16px; position: relative"></div>
-        <div style="width: 132px; color: rgba(0, 0, 0, 0.70); font-size: 20px; font-family: Alibaba PuHuiTi; font-weight: 400; word-wrap: break-word">2024/01/23</div>
     </div>
-    <div style="width: 187px; left: 80px; top: 302px; position: absolute; color: black; font-size: 24px; font-family: Alibaba PuHuiTi; font-weight: 700; word-wrap: break-word">一点设计<br/>></div>
-    <div style="height: 324px; left: 867px; top: 699px; position: absolute; background: rgba(0, 0, 0, 0.02); flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 16px; display: inline-flex">
-        <div style="color: black; font-size: 32px; font-family: Alibaba PuHuiTi; font-weight: 700; word-wrap: break-word">title 标题</div>
-        <div style="align-self: stretch; color: black; font-size: 28px; font-family: Alibaba PuHuiTi; font-weight: 400; word-wrap: break-word">一百字的内容摘要，一百字的内容摘要一百字的内容摘要一百字的内容摘要一百字的内容摘要</div>
-        <div style="align-self: stretch; justify-content: flex-start; align-items: flex-start; gap: 16px; display: inline-flex">
-            <div style="width: 70px; color: rgba(0, 0, 0, 0.70); font-size: 20px; font-family: Alibaba PuHuiTi; font-weight: 400; word-wrap: break-word">#话题 1</div>
-            <div style="width: 70px; color: rgba(0, 0, 0, 0.70); font-size: 20px; font-family: Alibaba PuHuiTi; font-weight: 400; word-wrap: break-word">#话题 2</div>
-            <div style="width: 70px; color: rgba(0, 0, 0, 0.70); font-size: 20px; font-family: Alibaba PuHuiTi; font-weight: 400; word-wrap: break-word">#话题 3</div>
-            <div style="width: 70px; color: rgba(0, 0, 0, 0.70); font-size: 20px; font-family: Alibaba PuHuiTi; font-weight: 400; word-wrap: break-word">#话题 4</div>
-            <div style="width: 70px; color: rgba(0, 0, 0, 0.70); font-size: 20px; font-family: Alibaba PuHuiTi; font-weight: 400; word-wrap: break-word">#话题 5</div>
-        </div>
-        <div style="width: 382px; height: 16px; position: relative"></div>
-        <div style="width: 382px; height: 16px; position: relative"></div>
-        <div style="width: 132px; color: rgba(0, 0, 0, 0.70); font-size: 20px; font-family: Alibaba PuHuiTi; font-weight: 400; word-wrap: break-word">2024/01/23</div>
-    </div>
-    <div style="padding-top: 19px; padding-bottom: 18px; padding-left: 23px; padding-right: 55px; left: 80px; top: 80px; position: absolute; border: 2px black solid; justify-content: flex-start; align-items: flex-end; gap: 14px; display: inline-flex">
-        <div style="color: black; font-size: 32px; font-family: Inter; font-weight: 500; word-wrap: break-word">Tue</div>
-        <div style="color: black; font-size: 32px; font-family: Inter; font-weight: 500; word-wrap: break-word">2024<br/>01<br/>23</div>
-    </div>
-    <div style="width: 240.98px; height: 0px; left: 80px; top: 457px; position: absolute; transform: rotate(-39.11deg); transform-origin: 0 0; border: 1px black solid"></div>
-    <div style="left: 80px; top: 570px; position: absolute; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 18px; display: inline-flex">
-        <div style="width: 187px; color: black; font-size: 24px; font-family: Alibaba PuHuiTi; font-weight: 400; word-wrap: break-word">一点工作 ></div>
-        <div style="width: 187px; height: 0px; border: 1px black solid"></div>
-        <div style="width: 187px; color: black; font-size: 24px; font-family: Alibaba PuHuiTi; font-weight: 400; word-wrap: break-word">个站日志 ></div>
-        <div style="width: 187px; height: 0px; border: 1px black solid"></div>
-        <div style="width: 187px; color: black; font-size: 24px; font-family: Alibaba PuHuiTi; font-weight: 400; word-wrap: break-word">多点生活 ></div>
-        <div style="width: 187px; height: 0px; border: 1px black solid"></div>
-        <div style="width: 187px; color: black; font-size: 24px; font-family: Alibaba PuHuiTi; font-weight: 400; word-wrap: break-word">关于自己 ></div>
-        <div style="width: 187px; height: 0px; border: 1px black solid"></div>
-    </div>
-</div>
-
-
-
-
 </body>
 </html>
