@@ -1,90 +1,28 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>你的个人网站test</title>
-    <!-- 在这里添加你的样式表链接、其他 meta 标签等 -->
-    <style>
-        /* 在这里添加你的自定义样式 */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f0f0;
-        }
-
-        #container {
-            display: flex;
-        }
-
-        #navigation {
-            width: 20%;
-            background-color: #333;
-            color: white;
-            padding: 20px;
-        }
-
-        #banner {
-            width: 50%;
-            padding: 20px;
-            background-color: #4285f4;
-            color: white;
-        }
-
-        #articles {
-            width: 30%;
-            padding: 20px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-
-        .article-card {
-            width: 48%;
-            margin-bottom: 20px;
-            background-color: white;
-            padding: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-    </style>
+    <title>你的个人网站</title>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
-    <div id="container">
-        <!-- 导航栏 -->
-        
+    <!-- 用于显示 Markdown 内容的元素 -->
+    <div id="markdownContent"></div>
 
-        <!-- 标题banner区域 -->
-        <div id="banner">
-            <h1>你的个人网站</h1>
-            <!-- 可以在这里添加其他 banner 区域的内容 -->
-        </div>
-
-        <!-- 文章入口卡片 -->
-        <div id="articles">
-            <!-- 文章1 -->
-            <div id="articleContent"></div>
-
-            <!-- 异步加载文本内容的脚本 -->
-                <script>
-        // 使用 Fetch API 异步加载文本内容
-        fetch('https://raw.githubusercontent.com/YolandalS/yolandathinks/master/2024-01-28-assets/2024-01-28.md')
+    <!-- 异步加载并渲染 Markdown 内容的脚本 -->
+    <script>
+        // 异步加载 Markdown 文件
+        fetch('2024-01-28-assets/2024-01-28.md')
             .then(response => response.text())
-                       .then(markdownContent => {
+            .then(markdownContent => {
                 // 使用 marked.js 将 Markdown 转换为 HTML
                 const htmlContent = marked(markdownContent);
 
                 // 将 HTML 内容插入到页面中
                 document.getElementById('markdownContent').innerHTML = htmlContent;
             })
-                    .catch(error => console.error('加载文本内容时发生错误：', error));
-                </script>
-
-          
-
-            <!-- 添加更多文章卡片 -->
-        </div>
-    </div>
+            .catch(error => console.error('加载 Markdown 内容时发生错误：', error));
+    </script>
 </body>
 </html>
