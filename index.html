@@ -7,14 +7,14 @@
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
-    <h1>yolanda thinks 2</h1>
+    <h1>yolanda thinks 3</h1>
     <!-- 用于显示 Markdown 内容的元素 -->
     <div id="markdownContent"></div>
 
     <!-- 异步加载并渲染 Markdown 内容的脚本 -->
     <script>
         // 异步加载 Markdown 文件
-        fetch('/YolandalS/yolandathinks/2024-01-28-assets/2024-01-28.md')
+        fetch('./2024-01-28-assets/2024-01-28.md')
 
             .then(response => response.text())
             .then(markdownContent => {
