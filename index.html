@@ -14,7 +14,7 @@
     <!-- 异步加载并渲染 Markdown 内容的脚本 -->
     <script>
         // 异步加载 Markdown 文件
-        fetch('/2024-01-28-assets/2024-01-28.md')
+        fetch('./2024-01-28-assets/2024-01-28.md')
             .then(response => response.text())
             .then(markdownContent => {
                 // 使用 marked.js 将 Markdown 转换为 HTML
