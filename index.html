@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>你的个人网站</title>
+    <title>111</title>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
@@ -23,7 +23,8 @@
             })
             .then(markdownContent => {
                 // 使用 marked.js 将 Markdown 转换为 HTML
-                const htmlContent = marked(markdownContent);
+               const htmlContent = marked.parse(markdownContent);
+
 
                 // 将 HTML 内容插入到页面中
                 document.getElementById('markdownContent').innerHTML = htmlContent;
