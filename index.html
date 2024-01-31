@@ -3,28 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>333</title>
+    <title>你的个人网站</title>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
-
 <body>
-    <h1>333 yolanda thinks</h1>
+    <h1>yolanda thinks</h1>
     <!-- 用于显示 Markdown 内容的元素 -->
     <div id="markdownContent"></div>
-
-<script>
-    console.log(typeof marked); // 应该显示 "function"
-</script>
-
-     
 
     <!-- 异步加载并渲染 Markdown 内容的脚本 -->
     <script>
         // 异步加载 Markdown 文件
         fetch('./text.md')
-
-
-            .then(response => response.text())
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Markdown 文件加载失败');
+                }
+                return response.text();
+            })
             .then(markdownContent => {
                 // 使用 marked.js 将 Markdown 转换为 HTML
                 const htmlContent = marked(markdownContent);
