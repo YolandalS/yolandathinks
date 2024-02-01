@@ -13,14 +13,14 @@
 <body>
     <!-- 可以在这里添加二级页面自己的其他内容 -->
     <h2>Page 1</h2>
-    <p>This is the content of Page 1.</p>
+    <p>This is the content of Page 1. same folder</p>
 
     <!-- 可以在这里调用模板中的脚本或者添加其他脚本 -->
 
     <!-- 异步加载并渲染 Page 1 的 Markdown 内容的脚本 -->
     <script>
         // 异步加载 Markdown 文件
-        fetch('./text.md')
+        fetch('./webpages/page1.md')
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Markdown 文件加载失败');
