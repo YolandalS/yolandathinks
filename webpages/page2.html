@@ -20,7 +20,7 @@
     <!-- 异步加载并渲染 Page 1 的 Markdown 内容的脚本 -->
     <script>
         // 异步加载 Markdown 文件
-        fetch('./markdown/page1.md')
+        fetch('./webcontent/page1.md')
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Markdown 文件加载失败');
