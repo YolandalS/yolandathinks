@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>yolandathinks</title>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <h1>2nd pages template</h1>
+    <!-- 用于显示 Markdown 内容的元素 -->
+    <div id="markdownContent"></div>
+
+    <!-- 异步加载并渲染 Markdown 内容的脚本 -->
+    <script>
+        // 异步加载 Markdown 文件
+        fetch('./page1.md')  // 替换为相应的 Markdown 文件路径
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Markdown 文件加载失败');
+                }
+                return response.text();
+            })
+            .then(markdownContent => {
+                // 使用 marked.js 将 Markdown 转换为 HTML
+                const htmlContent = marked.parse(markdownContent);
+
+                // 将 HTML 内容插入到页面中
+                document.getElementById('markdownContent').innerHTML = htmlContent;
+            })
+            .catch(error => console.error('加载 Markdown 内容时发生错误：', error));
+    </script>
+</body>
+</html>
