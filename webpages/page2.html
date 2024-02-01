@@ -1,0 +1,40 @@
+<!-- page1.html -->
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page 1 - yolandathinks</title>
+
+    <!-- 引入模板文件 -->
+    <link rel="import" href="./template.html">
+</head>
+<body>
+    <!-- 可以在这里添加二级页面自己的其他内容 -->
+    <h2>Page 1</h2>
+    <p>This is the content of Page 1.</p>
+
+    <!-- 可以在这里调用模板中的脚本或者添加其他脚本 -->
+
+    <!-- 异步加载并渲染 Page 1 的 Markdown 内容的脚本 -->
+    <script>
+        // 异步加载 Markdown 文件
+        fetch('./markdown/page1.md')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Markdown 文件加载失败');
+                }
+                return response.text();
+            })
+            .then(markdownContent => {
+                // 使用 marked.js 将 Markdown 转换为 HTML
+                const htmlContent = marked.parse(markdownContent);
+
+                // 将 HTML 内容插入到页面中
+                document.getElementById('markdownContent').innerHTML = htmlContent;
+            })
+            .catch(error => console.error('加载 Markdown 内容时发生错误：', error));
+    </script>
+</body>
+</html>
